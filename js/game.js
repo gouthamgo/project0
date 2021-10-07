@@ -7,7 +7,9 @@ $(document).ready(function() {
     $('button').on('click', restart) ///to restart the game
   });
 
-  function makeAMove(e) {//event object
+  // function makeAMove(e) {//event object
+  const makeAMove = function (e) {
+
     // e.preventDefault();//default action prevented
     var cell = $(e.currentTarget);
     // The currentTarget event property returns the element whose event listeners triggered the event.
@@ -18,7 +20,7 @@ $(document).ready(function() {
 // If a player clicks a cell that has already been marked,
 // they should see an alert letting them know that the cell in question has already been taken
 
-      window.setTimeout(function () {
+      window.setTimeout(function () {//function to remove the message
         removeMessage('full');
       },1500);
       return false;
@@ -51,6 +53,7 @@ $(document).ready(function() {
     }
 
   }
+  // show messages
   function showMessage(name) {
       $('#alertContainer').css('display', 'flex');
       //  css("propertyname","value");
@@ -72,27 +75,31 @@ $(document).ready(function() {
     var row1 = $('.row1').text();
     var row2 = $('.row2').text();
     var row3 = $('.row3').text();
-    var rDiagonal = $('.rDiagonal').text();
-    var lDiagonal = $('.lDiagonal').text();
+    var rD = $('.rD').text();
+    var lD = $('.lD').text();
     var col1 = $('.col1').text();
     var col2 = $('.col2').text();
     var col3 = $('.col3').text();
 
-    var playerOneScore = parseInt($('#playerOneScore').text());//convert string to number and return
-    var playerTwoScore = parseInt($('#playerTwoScore').text());
+    var POneScore = parseInt($('#POneScore').text());//convert string to number and return
+    var PTwoScore = parseInt($('#PTwoScore').text());
 
-    var playerOneWins = row1 === "XXX" || row2 === "XXX" || row3 === "XXX" || rDiagonal === "XXX" || lDiagonal === "XXX" || col1 === "XXX" || col2 === "XXX" || col3 === "XXX";
-    var playerTwoWins = row1 === "OOO" || row2 === "OOO" || row3 === "OOO" || rDiagonal === "OOO" || lDiagonal === "OOO" || col1 === "OOO" || col2 === "OOO" || col3 === "OOO";
+    var POneWins = row1 === "XXX" || row2 === "XXX" || row3 === "XXX" ||
+                        rD === "XXX" || lD === "XXX" || col1 === "XXX" ||
+                        col2 === "XXX" || col3 === "XXX";
+    var PTwoWins = row1 === "OOO" || row2 === "OOO" || row3 === "OOO" ||
+                         rD === "OOO" || lD === "OOO" || col1 === "OOO" ||
+                         col2 === "OOO" || col3 === "OOO";
 
-    if (playerOneWins) {
+    if (POneWins) {
       showMessage('win');
-      playerOneScore ++  ;
-      $('#playerOneScore').text(playerOneScore);
+      POneScore ++  ;
+      $('#POneScore').text(POneScore);
       window.setTimeout(resetBoard,1500);
-    } else if (playerTwoWins) {
+    } else if (PTwoWins) {
       showMessage('win');
-      playerTwoScore ++;
-      $('#playerTwoScore').text(playerTwoScore);
+      PTwoScore ++;
+      $('#PTwoScore').text(PTwoScore);
       window.setTimeout(resetBoard,1500);
     } else if ((row1 + row2 + row3).length === 9) {
       showMessage('draw');
@@ -111,8 +118,8 @@ $(document).ready(function() {
   }
   //function to restart
   function restart() {
-    resetBoard();
-    $('#playerOneScore').text('0');
-    $('#playerTwoScore').text('0');
-    $('#current span').text('1');
+    resetBoard();//reset the board
+    $('#POneScore').text('0'); // scores come to 0
+    $('#PTwoScore').text('0'); 
+    $('#current span').text('1');// player 1 comes to play
 }
