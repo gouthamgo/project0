@@ -11,6 +11,11 @@ My job is to make the game  work using Javascript and jQuery logics.
 
 The actual user stories:
 
+![](img/IMG-0057.jpg)
+![](img/IMG-0058.jpg)
+
+
+
 **Gameplay:**
 -First the page loads using  document ready function
 - Then  Player 1 (X) is the first player to go and make a move 
