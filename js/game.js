@@ -3,12 +3,12 @@
 
 
 $(document).ready(function() {
-    $('.board td').on('click', makeAMove);
-    $('button').on('click', restart)
+    $('.board td').on('click', makeAMove);//main function
+    $('button').on('click', restart) ///to restart the game
   });
 
   function makeAMove(e) {//event object
-    e.preventDefault();//default action prevented
+    // e.preventDefault();//default action prevented
     var cell = $(e.currentTarget);
     // The currentTarget event property returns the element whose event listeners triggered the event.
 
@@ -37,18 +37,36 @@ $(document).ready(function() {
 
     if (currentPlayer === '1') {
       element.text('X').addClass('X');
-      window.setTimeout(checkForMatch,1000);//call for chekforMatch function
+        checkForMatch();
+       // window.setTimeout(checkForMatch,1000);//call for chekforMatch function
       $('#current span').text('2');
     } else {
         // When Player 2 clicks an empty cell, it should be marked with an "O",
         //  and Current Player should switch back to one
 
       element.text('O').addClass('O');
-      window.setTimeout(checkForMatch,1000);
+        checkForMatch();
+       // window.setTimeout(checkForMatch,1000);
       $('#current span').text('1');
     }
 
   }
+  function showMessage(name) {
+      $('#alertContainer').css('display', 'flex');
+      //  css("propertyname","value");
+      $('#' + name).css('display','block');
+    }
+
+    function removeMessage(name) {
+      $('#alertContainer').css('display', 'none');
+      $('#' + name).css('display','none');
+
+    }
+
+
+
+
+
   //function to check the wins
   function checkForMatch() {
     var row1 = $('.row1').text();
@@ -68,7 +86,7 @@ $(document).ready(function() {
 
     if (playerOneWins) {
       showMessage('win');
-      playerOneScore ++;
+      playerOneScore ++  ;
       $('#playerOneScore').text(playerOneScore);
       window.setTimeout(resetBoard,1500);
     } else if (playerTwoWins) {
@@ -80,18 +98,6 @@ $(document).ready(function() {
       showMessage('draw');
       window.setTimeout(resetBoard,1500);
     }
-  }
-
-
-  function showMessage(name) {
-    $('#alertContainer').text('#win');
-    //  css("propertyname","value");
-
-  }
-
-  function removeMessage(name) {
-    $('#alertContainer').text('#win');
-
   }
 
 
@@ -109,8 +115,4 @@ $(document).ready(function() {
     $('#playerOneScore').text('0');
     $('#playerTwoScore').text('0');
     $('#current span').text('1');
-  }
-
-
-
-  
+}
