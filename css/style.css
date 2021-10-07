@@ -70,7 +70,7 @@ font-family: 'Press Start 2P', cursive;
     cursor: pointer;
   }
 
-  .board tr td:first-child {
+  /* .board tr td:first-child {
     border-left: none;
   }
 
@@ -84,7 +84,7 @@ font-family: 'Press Start 2P', cursive;
 
   .board tr:last-child td {
     border-bottom: none;
-  }
+  } */
 
   button {
     background-color: #F7B733;
