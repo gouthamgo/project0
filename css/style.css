@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+  /* background: */
+  text-align: center;
+  background-image: url(../img/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+font-family: 'Press Start 2P', cursive;
+}
+
+#alertContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #alertContainerInner {
+    width: 40%;
+    background-color: #DFDCE3;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #FC4A1A;
+    z-index: 1;
+    display: none;
+    position: relative;
+  }
+
+  h1, h2, th, td, button, .X{
+    color: #DFDCE3;
+  }
+
+  table {
+    margin: 20px auto;
+    width: 30%;
+  }
+
+  table.board {
+    border-collapse: collapse;
+    font-size: 50px;
+  }
+
+  .O, .playerTwoScore {
+    color: #F7B733;
+  }
+
+  .board td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 5px solid #DFDCE3;
+    cursor: pointer;
+  }
+
+  .board tr td:first-child {
+    border-left: none;
+  }
+
+  .board tr td:last-child {
+    border-right: none;
+  }
+
+  .board tr:first-child td {
+    border-top: none;
+  }
+
+  .board tr:last-child td {
+    border-bottom: none;
+  }
+
+  button {
+    background-color: #F7B733;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+  }
+
+  button:hover {
+    background-color: #f8c154;
+    cursor: pointer;
+    background-color:
+  }
