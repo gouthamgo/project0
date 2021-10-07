@@ -28,6 +28,10 @@ font-family: 'Press Start 2P', cursive;
     border-radius: 8px;
   }
 
+  h1{
+    color: orange;
+  }
+
   h3 {
     font-size: 30px;
     text-transform: uppercase;
@@ -37,8 +41,11 @@ font-family: 'Press Start 2P', cursive;
     position: relative;
   }
 
-  h1, h2, th, td, button, .X{
+   h2, td, button, .X{
     color: #DFDCE3;
+  }
+  th{
+      color: yellow;
   }
 
   table {
@@ -92,3 +99,66 @@ font-family: 'Press Start 2P', cursive;
     cursor: pointer;
     background-color:
   }
+
+.shards img{
+  width: 50px;
+	animation: bub 7s linear infinite;
+}
+
+  .shards{
+  	width: 100%;
+  	display: flex;
+  	align-items: center;
+
+  	justify-content: space-around;
+  	position: absolute;
+  	bottom: -70px;
+  }
+
+
+
+
+  @keyframes bub{
+	0%{
+		transform: translateY(0);
+		opacity: 0;
+	}
+	50%{
+
+		opacity: 1;
+	}
+	75%{
+
+		opacity: 1;
+	}
+	100%{
+		transform: translateY(-80vh);
+		opacity: 0;
+	}
+}
+
+.shards img:nth-child(1){
+	animation-delay: 2s;
+	width: 25px;
+}
+.shards img:nth-child(2){
+	animation-delay: 1s;
+}
+.shards img:nth-child(3){
+	animation-delay: 3s;
+	width: 25px;
+}
+.shards img:nth-child(4){
+	animation-delay: 4.5s;
+}
+.shards img:nth-child(5){
+	animation-delay: 3s;
+}
+.shards img:nth-child(6){
+	animation-delay: 6s;
+	width: 20px;
+}
+.shards img:nth-child(7){
+	animation-delay: 7s;
+	width: 35px;
+}
