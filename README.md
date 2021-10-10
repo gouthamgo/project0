@@ -14,7 +14,9 @@ The actual user stories:
 ![](img/IMG-0057.jpg)
 ![](img/IMG-0058.jpg)
 
-
+**Image Credit :**
+Image used while desgining the game
+ -Google.com
 
 **Gameplay:**
 -First the page loads using  document ready function
