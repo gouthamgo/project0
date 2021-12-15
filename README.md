@@ -2,6 +2,8 @@
 
 Time to check HTML,CSS, Javascript and jQuery knowlwedge!!!
 
+![](1.gif)
+
 My job is to make the game  work using Javascript and jQuery logics.
 
 - Make a HTML Page first using classes and ID's with tables to get the board
