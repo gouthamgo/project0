@@ -2,6 +2,8 @@
 
 Time to check HTML,CSS, Javascript and jQuery knowlwedge!!!
 
+Click here: [Live site Here](https://gouthamgo.github.io/project0/)
+
 ![](1.gif)
 
 My job is to make the game  work using Javascript and jQuery logics.
@@ -31,4 +33,4 @@ Image used while desgining the game
 - When a player gets three in a row in any direction, the board should should be wiped clean, and that player's score should be incremented
 - The game should then start over with the losing player getting to go first
 
-[Live site Here](https://gouthamgo.github.io/project0/)
+
